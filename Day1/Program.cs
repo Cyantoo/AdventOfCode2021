@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Utils;
 
 namespace Day1
 {
@@ -7,11 +8,7 @@ namespace Day1
     {
         static void Main(string[] args)
         {
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            Console.WriteLine(projectDirectory);
-            string[] lines = File.ReadAllLines(projectDirectory+@"\input.txt");
-            int[] lines_ints = Array.ConvertAll(lines, s => int.Parse(s));
+            int[] lines_ints = InputReader.ReadInts("input.txt");
             int result = 0;
             for(int i =3; i<lines_ints.Length; i++)
             {
