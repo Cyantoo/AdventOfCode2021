@@ -11,11 +11,11 @@ namespace Day2
             int horizontal = 0;
             int depth = 0;
             int aim = 0;
-            foreach(string line in lines)
+            foreach (string line in lines)
             {
                 string[] splits = line.Split(' ');
                 int magnitude = int.Parse(splits[1]);
-                switch(splits[0])
+                switch (splits[0])
                 {
                     case "forward":
                         depth += magnitude;
