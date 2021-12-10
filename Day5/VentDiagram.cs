@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Day5
 {
@@ -19,9 +15,9 @@ namespace Day5
         public void PrintResult()
         {
             int result = 0;
-            for(int i =0; i< size; i++)
+            for (int i = 0; i < size; i++)
             {
-                for(int j =0; j<size; j++)
+                for (int j = 0; j < size; j++)
                 {
                     if (ventsPerCell[i, j] > 1) result++;
                 }
@@ -47,7 +43,7 @@ namespace Day5
                 }
                 for (int i = start; i <= end; i++)
                 {
-                    ventsPerCell[A[0], i]++; 
+                    ventsPerCell[A[0], i]++;
                 }
             }
             else if (A[1] == B[1])
@@ -61,7 +57,7 @@ namespace Day5
                 }
                 for (int i = start; i <= end; i++)
                 {
-                    ventsPerCell[i, A[1]] ++;
+                    ventsPerCell[i, A[1]]++;
                 }
             }
             else // Diagonal case
@@ -69,9 +65,9 @@ namespace Day5
                 int direction_x = A[0] < B[0] ? 1 : -1;
                 int direction_y = A[1] < B[1] ? 1 : -1;
 
-                for (int i = 0; i <= Math.Abs(A[0]-B[0]); i++)
+                for (int i = 0; i <= Math.Abs(A[0] - B[0]); i++)
                 {
-                    ventsPerCell[A[0]+direction_x*i, A[1]+direction_y*i] ++;
+                    ventsPerCell[A[0] + direction_x * i, A[1] + direction_y * i]++;
                 }
             }
             //Print2Darray(ventsPerCell);

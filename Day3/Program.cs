@@ -13,7 +13,7 @@ namespace Day3
             List<string> oxygen_candidates = lines.ToList();
             List<string> co2_candidates = lines.ToList();
             int current_bit = 0;
-            while(oxygen_candidates.Count >1) // loop for oxygen
+            while (oxygen_candidates.Count > 1) // loop for oxygen
             {
                 int count_0 = 0;
                 int count_1 = 0;
@@ -63,7 +63,7 @@ namespace Day3
         static private List<string> Remove_number_at_bit(List<string> list_candidates, int bit, char number_to_remove)
         {
             var list_result = new List<string>(list_candidates);
-            foreach(string candidate in list_candidates)
+            foreach (string candidate in list_candidates)
             {
                 if (candidate[bit] == number_to_remove) list_result.Remove(candidate);
             }

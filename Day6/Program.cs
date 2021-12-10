@@ -13,17 +13,17 @@ namespace Day6
             List<int> initial_school = new(Array.ConvertAll(line.Split(','), s => int.Parse(s)));
             // Transform into an array of size 8
             long[] current_school = new long[9];
-            foreach(int days in initial_school)
+            foreach (int days in initial_school)
             {
                 current_school[days]++;
             }
-            for(int generation =0; generation < 256; generation++)
+            for (int generation = 0; generation < 256; generation++)
             {
                 long[] new_school = new long[9];
                 // case 0
                 new_school[8] += current_school[0];
                 new_school[6] += current_school[0];
-                for (int i = 0; i <8; i++)
+                for (int i = 0; i < 8; i++)
                 {
                     new_school[i] += current_school[i + 1];
                 }

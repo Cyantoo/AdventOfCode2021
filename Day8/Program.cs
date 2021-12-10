@@ -1,7 +1,6 @@
 ﻿using System;
-using Utils;
-using BidirectionalMap;
 using System.Collections.Generic;
+using Utils;
 
 namespace Day8
 {
@@ -112,7 +111,7 @@ namespace Day8
         private static bool ContainsEveryLetter(string big_string, IEnumerable<char> small_string)
         {
             bool result = true;
-            foreach(char letter in small_string)
+            foreach (char letter in small_string)
             {
                 if (!big_string.Contains(letter)) result = false;
             }
@@ -122,7 +121,7 @@ namespace Day8
         private static HashSet<char> SetDifference(HashSet<char> string1, HashSet<char> string2)
         {
             HashSet<char> result = new(string1);
-            foreach(char letter in string2)
+            foreach (char letter in string2)
             {
                 result.Remove(letter);
             }
@@ -131,7 +130,7 @@ namespace Day8
 
         private static int ReverseDictionary(Dictionary<int, HashSet<char>> mapping, HashSet<char> value)
         {
-            foreach(int a in mapping.Keys)
+            foreach (int a in mapping.Keys)
             {
                 if (mapping[a].SetEquals(value)) return a;
             }

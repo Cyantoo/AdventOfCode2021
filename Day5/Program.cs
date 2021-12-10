@@ -1,5 +1,4 @@
-﻿using System;
-using Utils;
+﻿using Utils;
 
 namespace Day5
 {
@@ -9,7 +8,7 @@ namespace Day5
         {
             string[] lines = InputReader.ReadLines("input.txt");
             VentDiagram ventDiagram = new();
-            foreach(string line in lines)
+            foreach (string line in lines)
             {
                 ventDiagram.ProcessLine(line);
             }

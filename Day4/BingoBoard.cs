@@ -9,13 +9,13 @@ namespace Day4
         private bool[,] marks;
         public BingoBoard(string[] string_board)
         {
-            if(string_board.Length != 5)
+            if (string_board.Length != 5)
             {
                 Console.WriteLine("Wrong number of lines when creating BingoBoard");
                 return;
             }
             board = new int[5, 5];
-            for(int i = 0; i< 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
@@ -25,7 +25,7 @@ namespace Day4
 
             }
             marks = new bool[5, 5]; // initializes to false
-            
+
 
         }
 
@@ -35,7 +35,7 @@ namespace Day4
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    if(board[i,j] == chosen_number)
+                    if (board[i, j] == chosen_number)
                     {
                         marks[i, j] = true;
                     }
@@ -61,11 +61,11 @@ namespace Day4
         {
             bool result = false;
             // have to check 5 lines, 5 columns
-            for(int i = 0; i<5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 bool col_all_true = true;
                 bool row_all_true = true;
-                for(int j =0; j<5; j++)
+                for (int j = 0; j < 5; j++)
                 {
                     if (!marks[i, j]) row_all_true = false;
                     if (!marks[j, i]) col_all_true = false;
